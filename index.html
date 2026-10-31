@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="theme-color" content="#1a1030" />
+  <title>Super POPO Racing</title>
+  <meta name="description" content="宇宙船に乗ったポポが、地球の子どもたちとかけっこ勝負！ 8bit 風レースゲーム" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="bar">
+      <h1>Super POPO Racing</h1>
+      <button id="mute" type="button" class="chip">🔊 音オン</button>
+    </header>
+    <div class="screen">
+      <canvas id="game" width="384" height="224" aria-label="Super POPO Racing ゲーム画面"></canvas>
+    </div>
+
+    <div id="touch" class="pad" aria-hidden="true">
+      <div class="dpad">
+        <span data-btn="up" class="b up">▲</span>
+        <span data-btn="left" class="b left">◀</span>
+        <span data-btn="right" class="b right">▶</span>
+        <span data-btn="down" class="b down">▼</span>
+      </div>
+      <span data-btn="start" class="b start">II</span>
+      <div class="ab">
+        <span data-btn="run" class="b run">B</span>
+        <span data-btn="jump" class="b jump">A</span>
+      </div>
+    </div>
+
+    <section class="help">
+      <h2>おはなし</h2>
+      <p>ちきゅうに あそびに きた ピンクの うちゅうじん「ポポ」。いっしょに くらす ともだちの ユウタに さそわれて、
+        こどもたちの かけっこたいかいに うちゅうせんで しゅつじょう！ でも、ねこ・おさる・そして ポポを タコだと
+        かんちがいした さかなやの おじさんが じゃまを してくる…！</p>
+      <h2>そうさ</h2>
+      <ul>
+        <li><kbd>↑</kbd><kbd>↓</kbd> レーンを かえる</li>
+        <li><kbd>→</kbd> ダッシュ（パワーを つかう）／ <kbd>←</kbd> ブレーキ</li>
+        <li><kbd>Space</kbd> / <kbd>Z</kbd>（A）ジャンプ ／ <kbd>X</kbd> / <kbd>Shift</kbd>（B）アイテムを つかう</li>
+        <li><kbd>Enter</kbd> ポーズ ／ <kbd>M</kbd> 音の オンオフ ／ ゲームパッド・スマホの タッチにも たいおう</li>
+      </ul>
+      <h2>ルール</h2>
+      <ul>
+        <li>5 にんで レース！ <b>3いいない</b>で ゴールすると つぎの ステージへ。ぜんぶで 5 ステージ</li>
+        <li><b>こんぺいとう</b>を とると ダッシュの パワーが たまる。<b>やじるしパネル</b>で かそく、<b>みずたまり</b>は スピードダウン</li>
+        <li><b>ねこ</b> … ポポの レーンに とびだしてくる。レーンを かえるか ジャンプで よけよう</li>
+        <li><b>おさる</b> … バナナの かわを なげてくる。じめんの かげが おちる ばしょ</li>
+        <li><b>さかなやの おじさん</b> … ポポを タコだと おもって あみで つかまえにくる！ つかまったら ボタンを れんだ</li>
+      </ul>
+      <h2>ユウタの サポート</h2>
+      <ul>
+        <li>コースの とちゅうで ユウタが じてんしゃで おいかけてきて アイテムを くれる（B で つかう）</li>
+        <li><b>ラムネ</b> … ターボで ぶっちぎり、じゃまも はねかえす ／ <b>かさ</b> … 1かい だけ じゃまを ふせぐ ／ <b>にぼし</b> … ねこも おさるも おじさんも むちゅうに なる</li>
+        <li>ビリが つづくと ユウタが おうえんして パワーを くれるよ</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="js/sprites.js"></script>
+  <script src="js/art.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/stages.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
